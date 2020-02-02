@@ -16,16 +16,17 @@
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
-body {
+div#main {
     position: absolute;
-    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
     overflow-x: hidden;
     perspective: 1px;
-    perspective-origin: 100% 0%;
 }
 
 @keyframes expandHeight {
@@ -112,9 +113,9 @@ h2 {
 
 div.project {
     position: relative;
-    margin: 0 1.5vw 3vw 0vw;
+    margin: 0 2vw 3vw 0vw;
     display: inline-block;
-    width: 17vw;
+    width: 16vw;
     height: 24vw;
     border: 2px solid grey;
     border-radius: 2vw;
@@ -274,10 +275,10 @@ div#triangleDiv {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: 100% 0%;
-    transform: translateZ(-1px) scale(2);
+    left: 0;
+    bottom: 0;
+    transform-style: preserve-3d;
+    transform: translateZ(-0.5px) scale(1.5);
     z-index: 100;
 }
 
