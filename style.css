@@ -80,7 +80,7 @@ h1 {
 }
 
 article {
-    margin: 3vw 35vw 5vw 5vw;
+    margin: 5vw 35vw 5vw 5vw;
 }
 
 @keyframes fadeSlideUp {
@@ -89,7 +89,7 @@ article {
 }
 
 p {
-    font-size: 2vw;
+    font-size: max(12pt, 2vw);
     animation-name: fadeSlideUp;
     animation-delay: 1.6s;
     animation-duration: 0.5s;
@@ -97,8 +97,9 @@ p {
 }
 
 h2 {
-    margin-top: 2vw;
-    font-size: 3vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: max(18pt, 3vw);
     border-bottom: 0.5vh solid black;
     animation-name: fadeSlideUp;
     animation-delay: 1.8s;
@@ -111,17 +112,24 @@ h2 {
 
 div.project {
     position: relative;
-    margin: 3vw 1vw 0 1vw;
+    margin: 0 1vw 3vw 1vw;
     display: inline-block;
     width: 16vw;
-    height: 20vw;
-    border: 0.15vw solid grey;
+    height: 24vw;
+    border: 2px solid grey;
     border-radius: 2vw;
+    z-index: 200;
     overflow: hidden;
     animation-name: fadeSlideUp;
     animation-delay: 2s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
+    transform-origin: 50% 50%;
+    transition-duration: 0.25s;
+}
+
+div.project:hover {
+    transform: scale(1.1);
 }
 
 div.project img {
@@ -129,19 +137,88 @@ div.project img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 50%;
     object-fit: cover;
-    border-bottom: 0.15vw solid grey;
+    border-bottom: 2px solid grey;
 }
 
-div.project h3 {
+div.description {
     position: absolute;
-    top: 13vw;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+div.description h3 {
+    color: black;
+    position: relative;
+    top: 1vw;
     left: 1vw;
     width: 14vw;
     font-size: 1.5vw;
 }
 
+div.description p {
+    color: black;
+    position: relative;
+    top: 1.5vw;
+    left: 1vw;
+    width: 14vw;
+    font-size: 1.3vw;
+}
+
+div.description p span.more {
+    color: green;
+    font-weight: bold;
+}
+
+div.project:hover div.description p span.more {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    div.project {
+        margin: 0vw 0vw 2vw 0vw;
+        width: 60vw;
+        height: 12vw;
+        border: 2px solid grey;
+        border-radius: 2vw;
+    }
+
+    div.project img {
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom: none;
+        border-right: 2px solid grey;
+    }
+
+    div.description {
+        top: 0;
+        left: 40%;
+        width: 60%;
+        height: 100%;
+    }
+
+    div.description h3 {
+        position: relative;
+        top: 1vw;
+        left: 2vw;
+        width: 32vw;
+        font-size: 2vw;
+    }
+
+    div.description p {
+        position: relative;
+        top: 1.5vw;
+        left: 2vw;
+        width: 32vw;
+        font-size: 1.8vw;
+    }
+}
 
 
 
@@ -160,6 +237,7 @@ div#triangleDiv {
     height: 100%;
     transform-origin: 100% 0%;
     transform: translateZ(-1px) scale(2);
+    z-index: 100;
 }
 
 .triangle {
