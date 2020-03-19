@@ -81,7 +81,40 @@ h1 {
 }
 
 article {
-    margin: 5vw 35vw 5vw 5vw;
+    margin: 4vw 35vw 5vw 5vw;
+    position: relative;
+}
+
+@keyframes fadeSlideRight {
+    from {transform: translateX(-5%); filter: opacity(0);}
+    to {transform: translateX(0); filter: opacity(1);}
+}
+
+p.blurb {
+    position: relative;
+    left: -5vw;
+    padding: 2vw 0 3vw 5vw;
+    font-size: max(12pt, 2vw);
+    animation-name: fadeSlideRight;
+    animation-delay: 1.6s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+p.blurb::after{
+    content: "";
+    z-index: -100;
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 0;
+    left: -40vw;
+    width: 100vw;
+    transform: skew(-24deg);
+    transform-origin: 100% 100%;
+    background-color: rgb(25,150,25);
+    box-shadow: 3vw 0 rgb(50,200,50);
+
 }
 
 @keyframes fadeSlideUp {
@@ -89,20 +122,16 @@ article {
     to {transform: translateY(0); filter: opacity(1);}
 }
 
-p {
-    font-size: max(12pt, 2vw);
-    animation-name: fadeSlideUp;
-    animation-delay: 1.6s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-}
-
 h2 {
+    position: relative;
+    left: -5vw;
+    padding-left: 5vw;
+    width: 65vw;
     margin-top: 3vw;
     margin-bottom: 3vw;
     font-size: max(18pt, 3vw);
     border-bottom: 0.5vh solid black;
-    animation-name: fadeSlideUp;
+    animation-name: fadeSlideRight;
     animation-delay: 1.8s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
@@ -117,7 +146,6 @@ div.project {
     display: inline-block;
     width: 16vw;
     height: 24vw;
-    border: 2px solid grey;
     border-radius: 2vw;
     z-index: 200;
     overflow: hidden;
@@ -127,6 +155,7 @@ div.project {
     animation-fill-mode: backwards;
     transform-origin: 50% 50%;
     transition-duration: 0.25s;
+    box-shadow: 0 0 1.5vw;
 }
 
 div.project:hover {
@@ -140,7 +169,6 @@ div.project img {
     width: 100%;
     height: 50%;
     object-fit: cover;
-    border-bottom: 2px solid grey;
 }
 
 div.description {
@@ -278,7 +306,7 @@ div#triangleDiv {
     left: 0;
     bottom: 0;
     transform-style: preserve-3d;
-    transform: translateZ(-0.5px) scale(1.5);
+    transform: translateZ(0.5px) scale(.5);
     z-index: 100;
 }
 
@@ -302,15 +330,15 @@ div#triangleDiv {
 
 .triangle.s1 {
     animation-delay: 1.6s;
-    border-bottom-color: rgb(50,0,50);
+    border-bottom-color: rgb(50,125,200);
 }
 
 .triangle.s2 {
     animation-delay: 1.8s;
-    border-bottom-color: rgb(40,0,40);
+    border-bottom-color: rgb(25,100,175);
 }
 
 .triangle.s3 {
     animation-delay: 2s;
-    border-bottom-color: rgb(30,0,30);
+    border-bottom-color: rgb(0,75,150);
 }
