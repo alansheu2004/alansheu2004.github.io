@@ -197,13 +197,24 @@ div.description p {
     font-size: 1.3vw;
 }
 
-div.description p span.more {
+div.description p span.go {
     color: green;
     font-weight: bold;
+    display: block;
+    margin-top: 0.2vw;
 }
 
-div.project:hover div.description p span.more {
-    text-decoration: underline;
+div.project div.description p span.go::after {
+    display: inline-block;
+    content: "\203A  \203A  \203A";
+    transform: scaleX(0);
+    transition: 0.25s;
+    transform-origin: 0% 0%;
+}
+
+div.project:hover div.description p span.go::after {
+    transform: scaleX(1);
+    transition: 0.25s;
 }
 
 @media screen and (max-width: 800px) {
@@ -250,6 +261,7 @@ div.project:hover div.description p span.more {
 }
 
 footer {
+    text-align: center;
     width: 100%;
     height: 20%;
     background-color: rgb(0,100,0);
@@ -260,6 +272,51 @@ footer {
     transform-origin: 50% 100%;
     animation-delay: 2.2;
     animation-fill-mode: backwards;
+}
+
+div#coolButtons {
+    text-align: center;
+    margin: auto;
+    padding-top: 5vh;
+}
+
+div#coolButtons a {
+    display: inline-block;
+    width: 5vh;
+    height: 5vh;
+    margin: 0 0.5vw;
+    filter: opacity(0.75);
+}
+
+div#coolButtons a:hover {
+    filter: opacity(1);
+}
+
+div#coolButtons a img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+footer p {
+    color: white;
+    font-size: 2vh;
+    margin-top: 0.5vh;
+}
+
+footer p a {
+    transition: 0.2s;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: Transparent;
+    color: white;
+}
+
+footer p a:hover {
+    transition: 0.2s;
+    text-decoration-color: white;
+    cursor: pointer;
 }
 
 
