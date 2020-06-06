@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     font-family: montserrat;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -72,10 +73,28 @@ header {
     animation-fill-mode: backwards;
 }
 
+div#tags {
+    width: 50%;
+    position: absolute;
+    left: 5%;
+    bottom: calc(5% + 8vw);
+    border-left: 1px solid white;
+}
+
+div#tags span {
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2.5vh;
+    padding: 0.5vh 1vw;
+    margin: 0;
+    border-right: 1px solid white;
+}
+
 h1 {
     position: absolute;
     left: 5%;
-    bottom: 10%;
+    bottom: 5%;
     color: white;
     font-size: 6vw;
 }
@@ -90,11 +109,21 @@ article {
     to {transform: translateX(0); filter: opacity(1);}
 }
 
+article > p {
+    font-size: max(12pt, 1.5vw);
+    margin-bottom: 4vh;
+    animation-name: fadeSlideRight;
+    animation-delay: 1.2s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+}
+
 p.blurb {
     position: relative;
+    color: white;
     left: -5vw;
     padding: 2vw 0 3vw 5vw;
-    font-size: max(12pt, 2vw);
+    font-size: max(12pt, 1.5vw);
     animation-name: fadeSlideRight;
     animation-delay: 1.6s;
     animation-duration: 0.5s;
@@ -108,13 +137,12 @@ p.blurb::after{
     display: block;
     height: 100%;
     top: 0;
-    left: -40vw;
-    width: 100vw;
+    left: -100vw;
+    width: 160vw;
     transform: skew(-24deg);
     transform-origin: 100% 100%;
     background-color: rgb(25,150,25);
     box-shadow: 3vw 0 rgb(50,200,50);
-
 }
 
 @keyframes fadeSlideUp {
@@ -191,7 +219,7 @@ div.description h3 {
 div.description p {
     color: black;
     position: relative;
-    top: 1.5vw;
+    top: 1.25vw;
     left: 1vw;
     width: 14vw;
     font-size: 1.3vw;
@@ -201,7 +229,8 @@ div.description p span.go {
     color: green;
     font-weight: bold;
     display: block;
-    margin-top: 0.2vw;
+    margin: 0.5vw 0 0 0.5vw;
+    font-size: 1.5vw;
 }
 
 div.project div.description p span.go::after {
