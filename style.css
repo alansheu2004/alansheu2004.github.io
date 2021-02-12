@@ -39,7 +39,7 @@
     header {
         width: 100%;
         background-color: rgb(0,100,0);
-        padding: 20px 50% 20px 5%;
+        padding: 40px 50% 20px 5%;
         position: relative;
         animation-name: expandHeight;
         animation-duration: 0.3s;
@@ -91,18 +91,21 @@
 
     h1 {
         color: white;
-        font-size: 40pt;
+        font-size: 36pt;
     }
 
     article {
-        margin: 40px 50vw 20px 5vw;
+        margin: 40px 45vw 20px 5vw;
         position: relative;
-        text-align: justify;
     }
 
     @keyframes fadeSlideRight {
         from {transform: translateX(-5%); filter: opacity(0);}
         to {transform: translateX(0); filter: opacity(1);}
+    }
+
+    a {
+        text-decoration: none;
     }
 
     article > p {
@@ -112,6 +115,7 @@
         animation-delay: 1.2s;
         animation-duration: 0.5s;
         animation-fill-mode: backwards;
+        text-align: justify;
     }
 
     p.blurb {
@@ -125,19 +129,18 @@
         animation-fill-mode: backwards;
     }
 
-    p.blurb::after{
-        content: "";
-        z-index: -1;
+    #blurbBox{
         position: absolute;
         display: block;
         height: 100%;
         top: 0;
-        left: -100vw;
-        width: 145vw;
+        left: -5vw;
+        width: 60vw;
         transform: skew(-24deg);
-        transform-origin: 100% 100%;
+        transform-origin: 0 0;
         background-color: rgb(25,150,25);
-        box-shadow: 3vw 0 rgb(50,200,50);
+        box-shadow: 20px 0 rgb(50,200,50);
+        z-index: -2;
     }
 
     @keyframes fadeSlideUp {
@@ -150,10 +153,10 @@
         left: -5vw;
         padding-left: 5vw;
         width: 65vw;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-        font-size: 30pt;
-        border-bottom: 0.5vh solid black;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        font-size: 24pt;
+        border-bottom: 3px solid black;
         animation-name: fadeSlideRight;
         animation-delay: 1.8s;
         animation-duration: 0.5s;
@@ -163,12 +166,17 @@
         background-size: 100% 0;
     }
 
+    div#projects {
+        display: flex;
+        align-items: stretch;
+        flex-flow: wrap;
+        margin-bottom: 100px;
+    }
+
     div.project {
-        position: relative;
-        margin: 0 2vw 3vw 0vw;
+        margin: 0 4% 30px 0;
         display: inline-block;
-        width: 16vw;
-        height: 24vw;
+        width: 28%;
         z-index: 200;
         overflow: hidden;
         animation-name: fadeSlideUp;
@@ -177,7 +185,9 @@
         animation-fill-mode: backwards;
         transform-origin: 50% 50%;
         transition-duration: 0.25s;
-        box-shadow: 0 0 1.5vw;
+        box-shadow: 0 0 10px;
+        text-align: left;
+        background-color: white;
     }
 
     div.project:hover {
@@ -185,38 +195,26 @@
     }
 
     div.project img {
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 150px;
         object-fit: cover;
     }
 
     div.description {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 50%;
+        padding: 10px;
     }
 
     div.description h3 {
         color: black;
-        position: relative;
-        top: 1vw;
-        left: 1vw;
-        width: 14vw;
-        font-size: 1.5vw;
+        font-size: 14pt;
     }
 
     div.description p {
         color: black;
         position: relative;
-        top: 1.25vw;
-        left: 1vw;
-        width: 14vw;
-        font-size: 1.3vw;
+        font-size: 12pt;
     }
 
     div.description p span.go {
@@ -224,7 +222,7 @@
         font-weight: bold;
         display: block;
         margin: 0.5vw 0 0 0.5vw;
-        font-size: 1.5vw;
+        font-size: 14pt;
     }
 
     div.project div.description p span.go::after {
@@ -286,7 +284,6 @@
     footer {
         text-align: center;
         width: 100%;
-        height: 20%;
         background-color: rgb(0,100,0);
         position: relative;
         animation-name: expandHeight;
@@ -295,12 +292,12 @@
         transform-origin: 50% 100%;
         animation-delay: 2.2;
         animation-fill-mode: backwards;
+        padding: 50px 0 20px;
     }
 
     div#coolButtons {
         text-align: center;
         margin: auto;
-        padding-top: 5vh;
     }
 
     div#coolButtons a {
@@ -324,7 +321,7 @@
 
     footer p, header p {
         color: white;
-        font-size: 2vh;
+        font-size: 14pt;
         margin-top: 0.5vh;
     }
 
@@ -332,16 +329,21 @@
         transition: 0.2s;
         color: white;
         text-decoration: underline;
-        text-decoration-color: Transparent;
+        text-decoration-color: white;
         color: white;
     }
 
-    footer p a:hover, footer p a, header p a:hover {
+    footer p a:hover, header p a:hover {
         transition: 0.2s;
-        text-decoration-color: white;
         cursor: pointer;
     }
 
+    #serpinski {
+        transform: scaleY(-1);
+        filter: opacity(30%);
+        height: 100px;
+        margin: 30px 0;
+    }
 
     #footer2 {
         width: 100%;
@@ -382,11 +384,11 @@
     div#triangleDiv {
         position: absolute;
         top: 40px;
+        left: 30vw;
         right: 0;
-        left: 0;
         bottom: 0;
         transform-style: preserve-3d;
-        transform: translateZ(-1.5px) scale(1.75);
+        transform: translateZ(-1.5px) scale(1.75) translateX(15vw);
         z-index: -1;
     }
 
@@ -401,6 +403,7 @@
         animation-name: expand;
         animation-duration: 0.3s;
         animation-fill-mode: backwards;
+        z-index: -1;
     }
 
     .triangle.upsideDown {
