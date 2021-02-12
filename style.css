@@ -1,429 +1,424 @@
-@font-face {
-    font-family: montserrat;
-    src: url(montserrat/Montserrat-Regular.otf);
-}
+    @font-face {
+        font-family: montserrat;
+        src: url(montserrat/Montserrat-Regular.otf);
+    }
 
-@font-face {
-    font-family: montserrat;
-    src: url(montserrat/Montserrat-Bold.otf);
-    font-weight: bold;
-}
+    @font-face {
+        font-family: montserrat;
+        src: url(montserrat/Montserrat-Bold.otf);
+        font-weight: bold;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: montserrat;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: montserrat;
+        box-sizing: border-box;
+    }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-}
+    html, body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffffee;
+    }
 
-div#main {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 1px;
-}
+    div#main {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+        perspective: 1px;
+    }
 
-@keyframes expandHeight {
-    from {transform: scaleY(0);}
-    to {transform: scaleY(1);}
-}
+    @keyframes expandHeight {
+        from {transform: scaleY(0);}
+        to {transform: scaleY(1);}
+    }
 
-header {
-    width: 100%;
-    height: 20%;
-    background-color: rgb(0,100,0);
-    position: relative;
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 0%;
-    animation-fill-mode: backwards;
-}
-
-
-#header2 {
-    width: 100%;
-    height: 4%;
-    background-color: rgb(25,150,25);
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 0%;
-    animation-delay: 0.3s;
-    animation-fill-mode: backwards;
-}
+    header {
+        width: 100%;
+        background-color: rgb(0,100,0);
+        padding: 20px 50% 20px 5%;
+        position: relative;
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 0%;
+        animation-fill-mode: backwards;
+    }
 
 
-#header3 {
-    width: 100%;
-    height: 2%;
-    background-color: rgb(50,200,50);
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 0%;
-    animation-delay: 0.6s;
-    animation-fill-mode: backwards;
-}
+    #header2 {
+        width: 100%;
+        height: 20px;
+        background-color: rgb(25,150,25);
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 0%;
+        animation-delay: 0.3s;
+        animation-fill-mode: backwards;
+    }
 
-div#tags {
-    width: 50%;
-    position: absolute;
-    left: 5%;
-    bottom: calc(5% + 10vh);
-    border-left: 1px solid white;
-}
 
-div#tags span {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    font-size: 2.5vh;
-    padding: 0.5vh 1vw;
-    margin: 0;
-    border-right: 1px solid white;
-}
+    #header3 {
+        width: 100%;
+        height: 10px;
+        background-color: rgb(50,200,50);
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 0%;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+    }
 
-h1 {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    color: white;
-    font-size: 8vh;
-}
+    div#tags {
+        border-left: 1px solid white;
+    }
 
-article {
-    margin: 4vw 35vw 5vw 5vw;
-    position: relative;
-}
+    div#tags span {
+        display: inline-block;
+        text-transform: uppercase;
+        overflow-x: visible; 
+        color: white;
+        font-size: 18pt;
+        margin: 0;
+        padding: 0 10px;
+        border-right: 1px solid white;
+    }
 
-@keyframes fadeSlideRight {
-    from {transform: translateX(-5%); filter: opacity(0);}
-    to {transform: translateX(0); filter: opacity(1);}
-}
+    h1 {
+        color: white;
+        font-size: 40pt;
+    }
 
-article > p {
-    font-size: max(12pt, 1.5vw);
-    margin-bottom: 4vh;
-    animation-name: fadeSlideRight;
-    animation-delay: 1.2s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-}
+    article {
+        margin: 40px 50vw 20px 5vw;
+        position: relative;
+        text-align: justify;
+    }
 
-p.blurb {
-    position: relative;
-    color: white;
-    left: -5vw;
-    padding: 2vw 0 3vw 5vw;
-    font-size: max(12pt, 1.5vw);
-    animation-name: fadeSlideRight;
-    animation-delay: 1.6s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-}
+    @keyframes fadeSlideRight {
+        from {transform: translateX(-5%); filter: opacity(0);}
+        to {transform: translateX(0); filter: opacity(1);}
+    }
 
-p.blurb::after{
-    content: "";
-    z-index: -100;
-    position: absolute;
-    display: block;
-    height: 100%;
-    top: 0;
-    left: -100vw;
-    width: 160vw;
-    transform: skew(-24deg);
-    transform-origin: 100% 100%;
-    background-color: rgb(25,150,25);
-    box-shadow: 3vw 0 rgb(50,200,50);
-}
+    article > p {
+        font-size: 12pt;
+        margin-bottom: 20px;
+        animation-name: fadeSlideRight;
+        animation-delay: 1.2s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+    }
 
-@keyframes fadeSlideUp {
-    from {transform: translateY(10%); filter: opacity(0);}
-    to {transform: translateY(0); filter: opacity(1);}
-}
+    p.blurb {
+        position: relative;
+        color: white;
+        padding: 20px 0;
+        font-size: 12pt;
+        animation-name: fadeSlideRight;
+        animation-delay: 1.6s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+    }
 
-h2 {
-    position: relative;
-    left: -5vw;
-    padding-left: 5vw;
-    width: 65vw;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    font-size: max(18pt, 3vw);
-    border-bottom: 0.5vh solid black;
-    animation-name: fadeSlideRight;
-    animation-delay: 1.8s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 0;
-}
+    p.blurb::after{
+        content: "";
+        z-index: -1;
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 0;
+        left: -100vw;
+        width: 145vw;
+        transform: skew(-24deg);
+        transform-origin: 100% 100%;
+        background-color: rgb(25,150,25);
+        box-shadow: 3vw 0 rgb(50,200,50);
+    }
 
-div.project {
-    position: relative;
-    margin: 0 2vw 3vw 0vw;
-    display: inline-block;
-    width: 16vw;
-    height: 24vw;
-    z-index: 200;
-    overflow: hidden;
-    animation-name: fadeSlideUp;
-    animation-delay: 2s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-    transform-origin: 50% 50%;
-    transition-duration: 0.25s;
-    box-shadow: 0 0 1.5vw;
-}
+    @keyframes fadeSlideUp {
+        from {transform: translateY(10%); filter: opacity(0);}
+        to {transform: translateY(0); filter: opacity(1);}
+    }
 
-div.project:hover {
-    transform: scale(1.1);
-}
+    h2 {
+        position: relative;
+        left: -5vw;
+        padding-left: 5vw;
+        width: 65vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        font-size: 30pt;
+        border-bottom: 0.5vh solid black;
+        animation-name: fadeSlideRight;
+        animation-delay: 1.8s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% 0;
+    }
 
-div.project img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
-
-div.description {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 50%;
-}
-
-div.description h3 {
-    color: black;
-    position: relative;
-    top: 1vw;
-    left: 1vw;
-    width: 14vw;
-    font-size: 1.5vw;
-}
-
-div.description p {
-    color: black;
-    position: relative;
-    top: 1.25vw;
-    left: 1vw;
-    width: 14vw;
-    font-size: 1.3vw;
-}
-
-div.description p span.go {
-    color: green;
-    font-weight: bold;
-    display: block;
-    margin: 0.5vw 0 0 0.5vw;
-    font-size: 1.5vw;
-}
-
-div.project div.description p span.go::after {
-    display: inline-block;
-    content: "\203A  \203A  \203A";
-    transform: scaleX(0);
-    transition: 0.25s;
-    transform-origin: 0% 0%;
-}
-
-div.project:hover div.description p span.go::after {
-    transform: scaleX(1);
-    transition: 0.25s;
-}
-
-@media screen and (max-width: 800px) {
     div.project {
-        margin: 0vw 0vw 2vw 0vw;
-        width: 60vw;
-        height: 12vw;
-        border: 2px solid grey;
-        border-radius: 2vw;
+        position: relative;
+        margin: 0 2vw 3vw 0vw;
+        display: inline-block;
+        width: 16vw;
+        height: 24vw;
+        z-index: 200;
+        overflow: hidden;
+        animation-name: fadeSlideUp;
+        animation-delay: 2s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        transform-origin: 50% 50%;
+        transition-duration: 0.25s;
+        box-shadow: 0 0 1.5vw;
+    }
+
+    div.project:hover {
+        transform: scale(1.1);
     }
 
     div.project img {
+        position: absolute;
         top: 0;
         left: 0;
-        width: 40%;
-        height: 100%;
+        width: 100%;
+        height: 50%;
         object-fit: cover;
-        border-bottom: none;
-        border-right: 2px solid grey;
     }
 
     div.description {
-        top: 0;
-        left: 40%;
-        width: 60%;
-        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
     }
 
     div.description h3 {
+        color: black;
         position: relative;
         top: 1vw;
-        left: 2vw;
-        width: 32vw;
-        font-size: 2vw;
+        left: 1vw;
+        width: 14vw;
+        font-size: 1.5vw;
     }
 
     div.description p {
+        color: black;
         position: relative;
-        top: 1.5vw;
-        left: 2vw;
-        width: 32vw;
-        font-size: 1.8vw;
+        top: 1.25vw;
+        left: 1vw;
+        width: 14vw;
+        font-size: 1.3vw;
     }
-}
 
-footer {
-    text-align: center;
-    width: 100%;
-    height: 20%;
-    background-color: rgb(0,100,0);
-    position: relative;
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 100%;
-    animation-delay: 2.2;
-    animation-fill-mode: backwards;
-}
+    div.description p span.go {
+        color: green;
+        font-weight: bold;
+        display: block;
+        margin: 0.5vw 0 0 0.5vw;
+        font-size: 1.5vw;
+    }
 
-div#coolButtons {
-    text-align: center;
-    margin: auto;
-    padding-top: 5vh;
-}
+    div.project div.description p span.go::after {
+        display: inline-block;
+        content: "\203A  \203A  \203A";
+        transform: scaleX(0);
+        transition: 0.25s;
+        transform-origin: 0% 0%;
+    }
 
-div#coolButtons a {
-    display: inline-block;
-    width: 5vh;
-    height: 5vh;
-    margin: 0 0.5vw;
-    filter: opacity(0.75);
-}
+    div.project:hover div.description p span.go::after {
+        transform: scaleX(1);
+        transition: 0.25s;
+    }
 
-div#coolButtons a:hover {
-    filter: opacity(1);
-}
+    @media screen and (max-width: 800px) {
+        div.project {
+            margin: 0vw 0vw 2vw 0vw;
+            width: 60vw;
+            height: 12vw;
+            border: 2px solid grey;
+            border-radius: 2vw;
+        }
 
-div#coolButtons a img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-}
+        div.project img {
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: none;
+            border-right: 2px solid grey;
+        }
 
-footer p {
-    color: white;
-    font-size: 2vh;
-    margin-top: 0.5vh;
-}
+        div.description {
+            top: 0;
+            left: 40%;
+            width: 60%;
+            height: 100%;
+        }
 
-footer p a {
-    transition: 0.2s;
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: Transparent;
-    color: white;
-}
+        div.description h3 {
+            position: relative;
+            top: 1vw;
+            left: 2vw;
+            width: 32vw;
+            font-size: 2vw;
+        }
 
-footer p a:hover {
-    transition: 0.2s;
-    text-decoration-color: white;
-    cursor: pointer;
-}
+        div.description p {
+            position: relative;
+            top: 1.5vw;
+            left: 2vw;
+            width: 32vw;
+            font-size: 1.8vw;
+        }
+    }
+
+    footer {
+        text-align: center;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(0,100,0);
+        position: relative;
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 100%;
+        animation-delay: 2.2;
+        animation-fill-mode: backwards;
+    }
+
+    div#coolButtons {
+        text-align: center;
+        margin: auto;
+        padding-top: 5vh;
+    }
+
+    div#coolButtons a {
+        display: inline-block;
+        width: 5vh;
+        height: 5vh;
+        margin: 0 0.5vw;
+        filter: opacity(0.75);
+    }
+
+    div#coolButtons a:hover {
+        filter: opacity(1);
+    }
+
+    div#coolButtons a img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    footer p, header p {
+        color: white;
+        font-size: 2vh;
+        margin-top: 0.5vh;
+    }
+
+    footer p a, header p a {
+        transition: 0.2s;
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: Transparent;
+        color: white;
+    }
+
+    footer p a:hover, footer p a, header p a:hover {
+        transition: 0.2s;
+        text-decoration-color: white;
+        cursor: pointer;
+    }
 
 
-#footer2 {
-    width: 100%;
-    height: 3%;
-    background-color: rgb(25,150,25);
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 100%;
-    animation-delay: 2.4s;
-    animation-fill-mode: backwards;
-}
+    #footer2 {
+        width: 100%;
+        height: 3%;
+        background-color: rgb(25,150,25);
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 100%;
+        animation-delay: 2.4s;
+        animation-fill-mode: backwards;
+    }
 
 
-#footer3 {
-    width: 100%;
-    height: 1%;
-    background-color: rgb(50,200,50);
-    animation-name: expandHeight;
-    animation-duration: 0.3s;
-    animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
-    transform-origin: 50% 100%;
-    animation-delay: 2.5s;
-    animation-fill-mode: backwards;
-}
-
-
-
+    #footer3 {
+        width: 100%;
+        height: 1%;
+        background-color: rgb(50,200,50);
+        animation-name: expandHeight;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
+        transform-origin: 50% 100%;
+        animation-delay: 2.5s;
+        animation-fill-mode: backwards;
+    }
 
 
 
 
-@keyframes expand {
-    from {transform: scale(0,0);}
-    to {transform: scale(1,1);}
-}
 
-div#triangleDiv {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    transform-style: preserve-3d;
-    transform: translateZ(0.5px) scale(.5);
-    z-index: 100;
-}
 
-.triangle {
-    position: absolute;
-    height: 0;
-    width: 0;
-    right: calc(var(--right) - calc(var(--side) / 2) );
-    border-left: calc(var(--side)/2) solid Transparent;
-    border-right: calc(var(--side)/2) solid Transparent;
-    border-bottom: calc(var(--side)*0.866) solid var(--color);
-    animation-name: expand;
-    animation-duration: 0.3s;
-    animation-fill-mode: backwards;
-}
 
-.triangle.upsideDown {
-    border-bottom: none;
-    border-top: calc(var(--side)*0.866) solid var(--color);
-}
+    @keyframes expand {
+        from {transform: scale(0,0);}
+        to {transform: scale(1,1);}
+    }
 
-.triangle.s1 {
-    animation-delay: 1.6s;
-    border-bottom-color: rgb(50,125,200);
-}
+    div#triangleDiv {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        transform-style: preserve-3d;
+        transform: translateZ(-1.5px) scale(1.75);
+        z-index: -1;
+    }
 
-.triangle.s2 {
-    animation-delay: 1.8s;
-    border-bottom-color: rgb(25,100,175);
-}
+    .triangle {
+        position: absolute;
+        height: 0;
+        width: 0;
+        right: calc(var(--right) - calc(var(--side) / 2) );
+        border-left: calc(var(--side)/2) solid Transparent;
+        border-right: calc(var(--side)/2) solid Transparent;
+        border-bottom: calc(var(--side)*0.866) solid var(--color);
+        animation-name: expand;
+        animation-duration: 0.3s;
+        animation-fill-mode: backwards;
+    }
 
-.triangle.s3 {
-    animation-delay: 2s;
-    border-bottom-color: rgb(0,75,150);
-}
+    .triangle.upsideDown {
+        border-bottom: none;
+        border-top: calc(var(--side)*0.866) solid var(--color);
+    }
+
+    .triangle.s1 {
+        animation-delay: 1.6s;
+        border-bottom-color: rgb(50,125,200);
+    }
+
+    .triangle.s2 {
+        animation-delay: 1.8s;
+        border-bottom-color: rgb(25,100,175);
+    }
+
+    .triangle.s3 {
+        animation-delay: 2s;
+        border-bottom-color: rgb(0,75,150);
+    }
