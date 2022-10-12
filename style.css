@@ -14,6 +14,7 @@
     padding: 0;
     font-family: montserrat;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -172,25 +173,34 @@ nav {
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     margin-bottom: 20px;
+    background-color: rgb(0, 150, 0);
+    padding: 0 5vw;
+
+    position: sticky;
+    top: 0;
+    width: 60vw;
+    text-align: left;
+    z-index: 999;
 }
 
-nav button {
+nav a {
+    display: inline-block;
     transition: 0.2s;
     color: white;
     font-size: 12pt;
     font-variant: small-caps;
     background-color: rgb(0, 150, 0);
     padding: 10px 20px;
-    margin-right: 10px;
     border: none;
+    font-weight: bold;
 }
 
-nav button:hover {
+nav a:hover {
     transition: 0.2s;
     background-color: rgb(0, 130, 0);
 }
 
-nav button:active {
+nav a:active {
     transition: 0.2s;
     background-color: rgb(0, 100, 0);
 }
@@ -208,10 +218,29 @@ div.tabGroup {
     width: 60vw;
 }
 
-div.tabGroup > p:first-child {
+div.tabGroup > h3 {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14pt;
+    animation-name: fadeSlideUp;
+    animation-delay: 2s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    transform-origin: 50% 50%;
+    transition-duration: 0.25s;
+}
+
+div.tabGroup > span {
+    visibility: hidden;
+    position: relative;
+    bottom: calc(12pt + 30px);
+}
+
+div.tabGroup > p{
     width: 100%;
     margin-bottom: 20px;
-    animation-name: fadeSlideRight;
+    font-size: 12pt;
+    animation-name: fadeSlideUp;
     animation-delay: 2s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
@@ -220,7 +249,7 @@ div.tabGroup > p:first-child {
 }
 
 div.tab {
-    margin: 0 5% 30px 0;
+    margin: 0 3% 30px 0;
     display: inline-block;
     width: 44%;
     z-index: 200;
@@ -231,9 +260,10 @@ div.tab {
     animation-fill-mode: backwards;
     transform-origin: 50% 50%;
     transition-duration: 0.25s;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 5px 0;
     text-align: left;
     background-color: white;
+    border-radius: 5px;
 }
 
 div.tab:hover {
