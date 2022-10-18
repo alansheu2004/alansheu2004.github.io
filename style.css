@@ -47,6 +47,11 @@ header {
     animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
     transform-origin: 50% 0%;
     animation-fill-mode: backwards;
+
+    background-image: linear-gradient(to right, rgba(0, 100, 0, 1) calc(100% - (2846/1600) * (60px + 42pt + 6.5vh)*(1)), rgba(0, 100, 0, 0.6) calc(100% - (2846/1600) * (60px + 42pt + 6.5vh)*(1/3))), url("art/Turt.png");
+    background-position: center right;
+    background-size: contain; 
+    background-repeat: no-repeat;
 }
 
 
