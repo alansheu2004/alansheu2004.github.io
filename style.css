@@ -92,7 +92,7 @@ div#tags span {
 
 h1 {
     color: white;
-    font-size: 36pt;
+    font-size: 30pt;
 }
 
 article {
@@ -150,21 +150,18 @@ p.blurb {
 }
 
 h2 {
-    position: relative;
-    left: -5vw;
-    padding-left: 5vw;
-    width: 65vw;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 24pt;
-    border-bottom: 3px solid black;
     animation-name: fadeSlideRight;
     animation-delay: 1.8s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 0;
+    background-color: rgb(0, 120, 0);
+    padding: 2vh;
+    color: white;
+    font-variant: small-caps;
+    width: 58vw;
+    text-align: center;
+    z-index: 999;
+    margin-top: 5vh;
 }
 
 nav {
@@ -234,7 +231,7 @@ div.tabGroup > h3 {
 div.tabGroup > span {
     visibility: hidden;
     position: relative;
-    bottom: calc(12pt + 30px);
+    bottom: calc(12pt + 50px);
 }
 
 div.tabGroup > p{
@@ -341,7 +338,7 @@ div.tab:hover div.description p span.go::after {
         display: none;
     }
 
-    nav {
+    h2, nav {
         width: 83vw;
     }
 
@@ -401,24 +398,24 @@ footer {
     padding: 50px 0 20px;
 }
 
-div#coolButtons {
+div.coolButtons {
     text-align: center;
-    margin: auto;
+    margin: 1vh auto;
 }
 
-div#coolButtons a {
+div.coolButtons a {
     display: inline-block;
-    width: 5vh;
-    height: 5vh;
-    margin: 0 0.5vw;
+    width: 4vh;
+    height: 4vh;
+    margin: 1vh 0.25vw;
     filter: opacity(0.75);
 }
 
-div#coolButtons a:hover {
+div.coolButtons a:hover {
     filter: opacity(1);
 }
 
-div#coolButtons a img {
+div.coolButtons a img {
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -427,7 +424,7 @@ div#coolButtons a img {
 
 footer p, header p {
     color: white;
-    font-size: 14pt;
+    font-size: 12pt;
     margin-top: 0.5vh;
 }
 
