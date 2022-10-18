@@ -6,9 +6,9 @@
         <link rel="stylesheet" type="text/css" href="style.css">
 
         <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
-    <link rel="manifest" href="icons/favicon/site.webmanifest">
+        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+        <link rel="manifest" href="icons/favicon/site.webmanifest">
     </head>
 
     <body>
@@ -17,46 +17,43 @@
                 <h1>Alan Sheu</h1>
                 <p>1 (408) 218-0411 &bullet; 
                     <a href="mailto:alansheu2004@gmail.com">alansheu2004@gmail.com</a> &bullet; 
-                    <a href="https://github.com/alansheu2004">Github</a> &bullet; 
-                    <a href="https://linkedin.com/in/alansheu2004">LinkedIn</a> &bullet;
                     <a href="Resume.pdf">Resume</a>
                 </p>
+                <div class="coolButtons" style="text-align: left;">
+                    <a href="https://github.com/alansheu2004" target="_blank"><img src="icons/github.png" /></a>
+                    <a href="https://www.linkedin.com/in/alansheu2004" target="_blank"><img src="icons/linkedin.png" style="filter: invert()" /></a>
+                    <a href="https://www.instagram.com/qi4e2" target="_blank"><img src="icons/instagram.png" style="filter: invert()" /></a>
+                </div>
             </header>
             <div id="header2"></div>
             <div id="header3"></div>
 
             <article>
                 <p>
-                    Hey, I'm Alan, a freshman at UCSB studying Data Science. Programming has been of great interest to me, and I have worked with many programming languages such as Java, Python, HTML, CSS, Javascript, and SQL. I guess web development is where I have fun.
-                </p>
-
-                <p>
-                    I currently plan to study Statistics and Data Science at UC Santa Barbara.
+                    Hey, I'm Alan Sheu. I love all things programming and math, and I like to make games and web projects in my free time. I've made a couple blogs and Desmos widgets and have also dabbled in graphic design and drawing, which you can see listed here!
                 </p>
 
                 <p class="blurb">
                     <span id="blurbBox"></span>
-                    I am currently Team Captain on my high school's FRC robotics team (Iron Claw 972). I have experience in programming control systems, CAD design, manufacturing, fundraising and budgeting, as well as leadership and communication.
+                    I am currently a freshman at UCSB studying Data Science. I was also Team Captain on my high school robotics team, where I worked with programming and machining.
                 </p>
 
                 <h2>Projects</h2>
 
-                <div id="projects" class="tabGroup">
+                <nav>
+                    <a href="#widgets">Widgets</a>
+                    <a href="#games">Games</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#art">Art</a>
+                </nav>
+
+                <div class="tabGroup">
+                    <span id="widgets"></span>
+                    <h3>Widgets</h3>
+                    <p>Some small interactive projects you can tinker around with:</p>
+
                     <div class="tab">
-                        <a href="https://customtd.herokuapp.com">
-                            <img src="icons/CustomTD.png" />
-                            <div class="description">
-                                <h3>CustomTD <small>(WIP)</small></h3>
-                                <p>
-                                    Create and play user-created custom tower defense games
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="tab">
-                        <a href="https://alansheu2004.github.io/SketchGrapher">
+                        <a href="https://alansheu2004.github.io/SketchGrapher" target="_blank">
                             <img src="icons/SketchGrapher.png" />
                             <div class="description">
                                 <h3>SketchGrapher</h3>
@@ -67,22 +64,9 @@
                             </div>
                         </a>
                     </div>
-    
+
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/Anomia">
-                            <img src="icons/Anomia.png" />
-                            <div class="description">
-                                <h3>Anomia</h3>
-                                <p>
-                                    A simple multiplayer card game that tests your memory and reflexes
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="tab">
-                        <a href="https://github.com/alansheu2004/PID-Tuner">
+                        <a href="https://github.com/alansheu2004/PID-Tuner" target="_blank">
                             <img src="icons/PID-Tuner.png" />
                             <div class="description">
                                 <h3>PID-Tuner</h3>
@@ -93,15 +77,112 @@
                             </div>
                         </a>
                     </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/krxpdivfik" target="_blank">
+                            <img src="icons/NoncircularWheels.png" />
+                            <div class="description">
+                                <h3>Non-circular Wheels <img class="desmos" src="icons/desmos.png" /></h3>
+                                <p>
+                                    Dynamically generated roads for non-circular wheels
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/v8b6svutfk" target="_blank">
+                            <img src="icons/FloatStone.png" />
+                            <div class="description">
+                                <h3>Float Stone <img class="desmos" src="icons/desmos.png" /></h3>
+                                <p>
+                                    A simulation of a stone suspended in fluid (no rotation yet)
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/sumsnbs7zv" target="_blank">
+                            <img src="icons/RollerCoaster.png" />
+                            <div class="description">
+                                <h3>Roller Coaster <img class="desmos" src="icons/desmos.png" /></h3>
+                                <p>
+                                    Making a custom Roller Coaster out of a function
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/ekvtaix4az" target="_blank">
+                            <img src="icons/ChiSquaredTest.png" />
+                            <div class="description">
+                                <h3>Chi-Squared Test  <img class="desmos" src="icons/desmos.png" /></h3>
+                                <p>
+                                    Basically just what the name says, nothing more
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
-                <h2>Interactive Blogs</h2>
+                <div class="tabGroup">
+                    <span id="games"></span>
+                    <h3>Games</h3>
+                    <p>Games that I've made over the course of my prolificly unproductive gaming career:</p>
 
-                <p>I have a couple interative blogs that work some of the time.</p>
+                    <div class="tab">
+                        <a href="https://customtd.herokuapp.com" target="_blank">
+                            <img src="icons/CustomTD.png" />
+                            <div class="description">
+                                <h3>CustomTD <small>(WIP)</small></h3>
+                                <p>
+                                    Create and play user-created custom tower defense games
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://alansheu2004.github.io/Anomia" target="_blank">
+                            <img src="icons/Anomia.png" />
+                            <div class="description">
+                                <h3>Anomia</h3>
+                                <p>
+                                    A simple multiplayer card game that tests your memory and reflexes
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/qf51tqufz3" target="_blank">
+                            <img src="icons/SnakeSnakeSnake.png" />
+                            <div class="description">
+                                <h3>Snake snake snake... <img class="desmos" src="icons/desmos.png" /></h3>
+                                <p>
+                                    The Snake game created in Desmos
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
                 <div class="tabGroup">
+                    <span id="blogs"></span>
+                    <h3>Blogs</h3>
+                    <p>A couple of (mostly) interactive blogs on some fun topics:</p>
+
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/PIDeconstructed">
+                        <a href="https://alansheu2004.github.io/PIDeconstructed" target="_blank">
                             <img src="icons/PIDeconstructed.png" />
                             <div class="description">
                                 <h3>PIDeconstructed</h3>
@@ -114,7 +195,7 @@
                     </div>
 
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/Rain-Running">
+                        <a href="https://alansheu2004.github.io/Rain-Running" target="_blank">
                             <img src="icons/RainRunning.png" />
                             <div class="description">
                                 <h3>Rain-Running</h3>
@@ -127,7 +208,7 @@
                     </div>
 
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/Enzyminator3000/">
+                        <a href="https://alansheu2004.github.io/Enzyminator3000/" target="_blank">
                             <img src="icons/Enzyminator3000.png" />
                             <div class="description">
                                 <h3>Enzyminator3000</h3>
@@ -139,59 +220,138 @@
                         </a>
                     </div>
                 </div>
-                
 
-                <h2>Desmos</h2>
+                <div class="tabGroup">
+                    <span id="art"></span>
+                    <h3>Art</h3>
+                    <p>Just a hobbyist and still an amateur, but I enjoy drawing quite a bit. I've worked mostly with Adobe Illustrator, MediBang Paint, and Desmos:</p>
 
-                <p>Desmos is an online graphing calculator, but also an extremely large time sink.</p>
-
-                <div id="desmos" class="tabGroup">
                     <div class="tab">
-                        <a href="https://www.desmos.com/calculator/kiepfweu9j">
+                        <a href="art/behemoth.png" target="_blank">
+                            <img src="art/behemoth.png" />
+                            <div class="description">
+                                <h3>Behemoth</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/oracles.png" target="_blank">
+                            <img src="art/oracles.png" />
+                            <div class="description">
+                                <h3>Oracles</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/afk.png" target="_blank">
+                            <img src="art/afk.png" />
+                            <div class="description">
+                                <h3>AFK</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/sacred.png" target="_blank">
+                            <img src="art/sacred.png" />
+                            <div class="description">
+                                <h3>Sacred</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/parting.png" target="_blank">
+                            <img src="art/parting.png" />
+                            <div class="description">
+                                <h3>Parting</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/gradblues.png" target="_blank">
+                            <img src="art/gradblues.png" />
+                            <div class="description">
+                                <h3>Post Grad Blues</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/hahn.png" target="_blank">
+                            <img src="art/hahn.png" />
+                            <div class="description">
+                                <h3>Hahn</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/softplace.png" target="_blank">
+                            <img src="art/softplace.png" />
+                            <div class="description">
+                                <h3>Soft Place</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/gallant.png" target="_blank">
+                            <img src="art/gallant.png" />
+                            <div class="description">
+                                <h3>Gallant</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="art/poolparty.png" target="_blank">
+                            <img src="art/poolparty.png" />
+                            <div class="description">
+                                <h3>Pool Party</h3>
+                                <p>
+                                    <span class="go">Go </span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="https://www.desmos.com/calculator/kiepfweu9j" target="_blank">
                             <img src="icons/DesmosLogo.png" />
                             <div class="description">
-                                <h3>Desmos Logo</h3>
+                                <h3>Desmos Logo <img class="desmos" src="icons/desmos.png" /></h3>
                                 <p>
-                                    The Desmos logo created in Desmos
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="tab">
-                        <a href="https://www.desmos.com/calculator/qf51tqufz3">
-                            <img src="icons/SnakeSnakeSnake.png" />
-                            <div class="description">
-                                <h3>Snake snake snake...</h3>
-                                <p>
-                                    The Snake game created in Desmos
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="tab">
-                        <a href="https://www.desmos.com/calculator/v8b6svutfk">
-                            <img src="icons/FLoatStone.png" />
-                            <div class="description">
-                                <h3>Float Stone</h3>
-                                <p>
-                                    A simulation of a stone suspended in fluid (no rotation yet)
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="tab">
-                        <a href="https://www.desmos.com/calculator/sumsnbs7zv">
-                            <img src="icons/RollerCoaster.png" />
-                            <div class="description">
-                                <h3>Roller Coaster</h3>
-                                <p>
-                                    Making a custom Roller Coaster out of a function
                                     <span class="go">Go </span>
                                 </p>
                             </div>
@@ -199,12 +359,11 @@
                     </div>
 
                     <div class="tab">
-                        <a href="https://www.desmos.com/calculator/krxpdivfik">
-                            <img src="icons/NoncircularWheels.png" />
+                        <a href="art/yoomtah.png" target="_blank">
+                            <img src="art/yoomtah.png" />
                             <div class="description">
-                                <h3>Non-circular Wheels</h3>
+                                <h3>Yoomtah!</h3>
                                 <p>
-                                    Dynamically generated roads for non-circular wheels
                                     <span class="go">Go </span>
                                 </p>
                             </div>
@@ -212,28 +371,27 @@
                     </div>
 
                     <div class="tab">
-                        <a href="https://www.desmos.com/calculator/ekvtaix4az">
-                            <img src="icons/ChiSquaredTest.png" />
+                        <a href="art/dawn.png" target="_blank">
+                            <img src="art/dawn.png" />
                             <div class="description">
-                                <h3>Chi-Squared Test</h3>
+                                <h3>Dawn</h3>
                                 <p>
-                                    Basically just what the name says, nothing more
                                     <span class="go">Go </span>
                                 </p>
                             </div>
                         </a>
                     </div>
                 </div>
-
             </article>
 
 
             <div id="footer3"></div>
             <div id="footer2"></div>
             <footer>
-                <div id="coolButtons">
-                    <a href="https://github.com/alansheu2004"><img src="icons/github.png" /></a>
-                    <a href="https://www.linkedin.com/in/alansheu2004"><img src="icons/linkedin.png" style="filter: invert()" /></a>
+                <div class="coolButtons">
+                    <a href="https://github.com/alansheu2004" target="_blank"><img src="icons/github.png" /></a>
+                    <a href="https://www.linkedin.com/in/alansheu2004" target="_blank"><img src="icons/linkedin.png" style="filter: invert()" /></a>
+                    <a href="https://www.instagram.com/qi4e2" target="_blank"><img src="icons/instagram.png" style="filter: invert()" /></a>
                 </div>
                 <p>Phone: 1 (408)-218-0411</p>
                 <p>Email: <a href="mailto:alansheu2004@gmail.com">alansheu2004@gmail.com</a></p>
