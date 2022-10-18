@@ -174,12 +174,12 @@ nav {
     animation-fill-mode: backwards;
     margin-bottom: 20px;
     background-color: rgb(0, 150, 0);
-    padding: 0 5vw;
+    padding: 0 2vw;
 
     position: sticky;
     top: 0;
-    width: 60vw;
-    text-align: left;
+    width: 58vw;
+    text-align: center;
     z-index: 999;
 }
 
@@ -190,7 +190,7 @@ nav a {
     font-size: 12pt;
     font-variant: small-caps;
     background-color: rgb(0, 150, 0);
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     font-weight: bold;
 }
@@ -216,6 +216,7 @@ div.tabGroup {
     flex-flow: wrap;
     margin-bottom: 20px;
     width: 60vw;
+    padding-left: 2vw;
 }
 
 div.tabGroup > h3 {
@@ -273,6 +274,7 @@ div.tab:hover {
 div.tab a {
     display: inline-block;
     line-height: 1;
+    width: 100%;
 }
 
 div.tab img {
@@ -337,6 +339,10 @@ div.tab:hover div.description p span.go::after {
 
     #triangleDiv {
         display: none;
+    }
+
+    nav {
+        width: 83vw;
     }
 
     div.tabGroup {
