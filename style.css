@@ -130,7 +130,7 @@ p.blurb {
     padding: 20px 0;
     font-size: 12pt;
     animation-name: fadeSlideRight;
-    animation-delay: 1.6s;
+    animation-delay: 1.2s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
 }
@@ -140,7 +140,7 @@ p.blurb {
     display: block;
     height: 100%;
     top: 0;
-    left: -5vw;
+    left: -2vw;
     width: 60vw;
     transform: skew(-10deg);
     transform-origin: 0 0;
@@ -160,23 +160,23 @@ h2 {
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     background-color: rgb(0, 120, 0);
-    padding: 2vh;
+    padding-top: 2vh;
     color: white;
     font-variant: small-caps;
     width: 58vw;
     text-align: center;
     z-index: 999;
     margin-top: 5vh;
+
+    position: sticky;
+    top: 0;
 }
 
 nav {
-    animation-name: fadeSlideRight;
-    animation-delay: 1.8s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
     margin-bottom: 20px;
     background-color: rgb(0, 150, 0);
     padding: 0 2vw;
+    margin-top: 20px;
 
     position: sticky;
     top: 0;
