@@ -102,15 +102,21 @@ h1 {
 
 img.face {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 40px;
     width: 30vw;
-    z-index: 100;
+    margin-bottom: 25px;
     border: rgb(0, 150, 0) 15px solid;
+    animation-name: fadeSlideUp;
+    animation-delay: 1s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    transform-origin: 50% 50%;
+    transition-duration: 0.25s;
 }
 
 article {
-    margin: 40px 40vw 80px 5vw;
+    padding: 40px 40vw 80px 5vw;
     position: relative;
 }
 
@@ -399,7 +405,7 @@ div.tab:hover div.description p span.go::after {
 
 @media screen and (max-aspect-ratio: 1/1) {
     article {
-        margin-right: 20vw;
+        padding-right: 20vw;
     }
 
     #blurbBox {
@@ -447,6 +453,20 @@ div.tab:hover div.description p span.go::after {
     div.description p {
         font-size: 12pt;
     }
+
+    img.face {
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 60vw;
+        border: rgb(0, 150, 0) 5px solid;
+        animation-name: fadeSlideUp;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        transform-origin: 50% 50%;
+        transition-duration: 0.25s;
+    }
 }
 
 @media screen and (min-aspect-ratio: 5/3) {
@@ -470,7 +490,7 @@ footer {
 }
 
 div.coolButtons {
-    width: 60%;
+    /* width: 60%; */
 }
 
 div.coolButtons a {
