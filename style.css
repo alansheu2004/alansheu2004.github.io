@@ -20,7 +20,7 @@
 html, body {
     height: 100vh;
     width: 100vw;
-    background-color: #f0fff0;
+    background-color: white;
 }
 
 div#main {
@@ -37,23 +37,23 @@ div#main {
     to {transform: scaleY(1);}
 }
 
+#headerblock {
+    width: 100%;
+    /* position: sticky; */
+    top: 0;
+    z-index: 10;
+}
+
 header {
     width: 100%;
     background-color: rgb(0,100,0);
-    padding: 40px 5% 20px 5%;
-    position: relative;
+    padding: 25px 5% 10px 5%;
     animation-name: expandHeight;
     animation-duration: 0.3s;
     animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
     transform-origin: 50% 0%;
     animation-fill-mode: backwards;
-
-    background-image: linear-gradient(to right, rgba(0, 100, 0, 1) calc(100% - (2846/1600) * (60px + 42pt + 6.5vh)*(1)), rgba(0, 100, 0, 0.6) calc(100% - (2846/1600) * (60px + 42pt + 6.5vh)*(1/3))), url("art/Turt.png");
-    background-position: center right;
-    background-size: contain; 
-    background-repeat: no-repeat;
 }
-
 
 #header2 {
     width: 100%;
@@ -101,7 +101,7 @@ h1 {
 }
 
 article {
-    margin: 40px 40vw 20px 5vw;
+    margin: 40px 40vw 80px 5vw;
     position: relative;
 }
 
@@ -110,18 +110,25 @@ article {
     to {transform: translateX(0); filter: opacity(1);}
 }
 
-a {
-    text-decoration: none;
+p a {
+    color: rgb(25,150,25);
 }
 
-article > p {
+article > p, article > ul {
     font-size: 12pt;
     margin-bottom: 20px;
     animation-name: fadeSlideRight;
-    animation-delay: 1.2s;
+    animation-delay: 0.4s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
-    text-align: justify;
+}
+
+article > p b, article > ul b {
+    color: rgb(0,120,0);
+}
+
+article > ul {
+    padding-left: 20px;
 }
 
 p.blurb {
@@ -155,18 +162,19 @@ p.blurb {
 }
 
 h2 {
+    display: inline-block;
     animation-name: fadeSlideRight;
-    animation-delay: 1.8s;
+    animation-delay: 0.6s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     background-color: rgb(0, 120, 0);
-    padding: 2vh;
+    padding: 10px 30px;
     color: white;
     font-variant: small-caps;
-    width: 58vw;
     text-align: center;
-    z-index: 999;
-    margin-top: 5vh;
+    font-size: 14pt;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 nav {
@@ -175,15 +183,15 @@ nav {
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
 
+    margin-top: 40px;
     margin-bottom: 20px;
     background-color: rgb(0, 150, 0);
     padding: 0 2vw;
 
     position: sticky;
     top: 0;
-    width: 58vw;
+    width: 40vw;
     text-align: center;
-    z-index: 999;
 }
 
 nav a {
@@ -193,9 +201,10 @@ nav a {
     font-size: 12pt;
     font-variant: small-caps;
     background-color: rgb(0, 150, 0);
-    padding: 10px 15px;
+    padding: 10px 25px;
     border: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -213,13 +222,58 @@ nav button:disabled {
     background-color: rgb(0, 100, 0);
 }
 
+div.citation {
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    animation-name: fadeSlideUp;
+    animation-delay: 0.8s;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+    transform-origin: 50% 50%;
+    transition-duration: 0.25s;
+    /* box-shadow: 0 0 5px 0; */
+    border-left: rgb(0, 120, 0) 8px solid;
+    background-color: #e0ffe0;
+    /* border-radius: 10px; */
+}
+
+div.citation a {
+    display: inline-block;
+    background-color: rgb(25,150,25);
+    padding: 5px 8px;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+span.journal {
+    font-style: italic;
+}
+
+span.title {
+    font-weight: bold;
+}
+
+[class="Alan Sheu"], [class="Alan D Sheu"] {
+    font-style: italic;
+}
+
+div.citation a:hover {
+    background-color: rgb(50,200,50);
+    transition: 0.25s;
+}
+
+div.citation a:active {
+    background-color: rgb(0,120,0);
+}
+
 div.tabGroup {
     display: flex;
     align-items: stretch;
     flex-flow: wrap;
     margin-bottom: 20px;
     width: 60vw;
-    padding-left: 2vw;
 }
 
 div.tabGroup > h3 {
@@ -240,7 +294,11 @@ div.tabGroup > span {
     bottom: calc(12pt + 50px);
 }
 
-div.tabGroup > p{
+div.tabGroup a {
+    text-decoration: none;
+}
+
+div.tabGroup > p {
     width: 100%;
     margin-bottom: 20px;
     font-size: 12pt;
@@ -253,25 +311,24 @@ div.tabGroup > p{
 }
 
 div.tab {
-    margin: 0 3% 30px 0;
+    margin: 0 15px 20px 0;
     display: inline-block;
     width: 44%;
-    z-index: 200;
     overflow: hidden;
     animation-name: fadeSlideUp;
-    animation-delay: 2s;
+    animation-delay: 0.8s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     transform-origin: 50% 50%;
     transition-duration: 0.25s;
-    box-shadow: 0 0 5px 0;
-    text-align: left;
-    background-color: white;
-    border-radius: 5px;
+    /* box-shadow: 0 0 5px 0; */
+    border-left: rgb(0, 120, 0) 8px solid;
+    background-color: #e0ffe0;
+    /* border-radius: 10px; */
 }
 
 div.tab:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 div.tab a {
@@ -282,7 +339,7 @@ div.tab a {
 
 div.tab img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
 }
 
@@ -340,9 +397,9 @@ div.tab:hover div.description p span.go::after {
         width: 90vw;
     }
 
-    #triangleDiv {
+    /* #triangleDiv {
         display: none;
-    }
+    } */
 
     h2, nav {
         width: 83vw;
@@ -385,7 +442,6 @@ div.tab:hover div.description p span.go::after {
 
 @media screen and (min-aspect-ratio: 5/3) {
     div.tab {
-        margin-right: 4%;
         width: 28%;
     }
 }
@@ -507,7 +563,8 @@ div#triangleDiv {
     bottom: 0;
     transform-style: preserve-3d;
     transform: translateZ(-1.5px) scale(1.75) translateX(15vw);
-    z-index: -1;
+    z-index: -99;
+    opacity: 0.2;
 }
 
 .triangle {
@@ -521,7 +578,6 @@ div#triangleDiv {
     animation-name: expand;
     animation-duration: 0.3s;
     animation-fill-mode: backwards;
-    z-index: -1;
 }
 
 .triangle.upsideDown {

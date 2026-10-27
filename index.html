@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
+
     <head>
         <title>Alan Sheu</title>
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -13,279 +15,131 @@
 
     <body>
         <div id="main">
-            <header>
-                <h1>Alan Sheu</h1>
-                <p>1 (408) 218-0411 &bullet; 
-                    <a href="mailto:alansheu2004@gmail.com">alansheu2004@gmail.com</a> &bullet; 
-                    <a href="Resume.pdf">Resume</a>
-                </p>
-                <div class="coolButtons" style="text-align: left;">
-                    <a href="https://github.com/alansheu2004" target="_blank"><img src="icons/github.png" /></a>
-                    <a href="https://www.linkedin.com/in/alansheu2004" target="_blank"><img src="icons/linkedin.png" style="filter: invert()" /></a>
-                    <a href="https://www.instagram.com/qi4e2" target="_blank"><img src="icons/instagram.png" style="filter: invert()" /></a>
-                </div>
-            </header>
-            <div id="header2"></div>
-            <div id="header3"></div>
+            <div id="headerblock">
+                <header>
+                    <h1>Alan Sheu</h1>
+                    <p><b>Email:</b> <a href="mailto:ads347@georgetown.edu">ads347@georgetown.edu</a></p>
+                    <p><b>CV:</b> <a href="ADS-CV.pdf">ADS-CV.pdf</a> (Last Updated: 26 October, 2026)</p>
+                    <div class="coolButtons" style="text-align: left;">
+                        <a href="https://github.com/alansheu2004" target="_blank"><img src="icons/github.png" /></a>
+                        <a href="https://www.linkedin.com/in/alansheu2004" target="_blank"><img src="icons/linkedin.png" style="filter: invert()" /></a>
+                    </div>
+                </header>
+                <div id="header2"></div>
+                <!-- <div id="header3"></div> -->
+            </div>
 
             <article>
                 <p>
-                    Hey, I'm Alan Sheu, and I'm into linguistics, data science, and math. I like to make games and web projects in my free time. I've made a couple interactive blogs and web apps, and I dabble in graphic design and illustration. Scroll down for more!
+                    I am a graduate student studying <b>Computational Linguistics at Georgetown University</b>. My research interests broadly include:
                 </p>
 
-                <p class="blurb">
-                    <span id="blurbBox"></span>
-                    I'm graduating from UCSB studying Data Science & Linguistics with an Emphasis on Language and Speech Technologies. I'm working with the Gaucho Game Lab to develop games as well as the Moeller Lab investigating mixotrophs in ocean simulations. I also make graphics for UCSB's Pops Orchestra & Gaucho Gaming club.
-                </p>
+                <ul>
+                    <li>Computational models of online sentence comprehension</li>
+                    <li>Cognitive interpretability of language models</li>
+                    <li>Real-time integration of multiple modalities</li>
+                </ul>
 
                 <p>
-                    Thanks for checking me out, and I hope you enjoy what you find!
+                    Outside of linguistics, I enjoy illustrating, running, and playing violin!
                 </p>
 
-                <h2>Projects</h2>
-                <nav>
-                    <a href="#coding">Coding</a>
-                    <a href="#blogs">Blogs</a>
-                    <a href="#art">Art</a>
-                </nav>
+                <h2>Publications</h2>
+
+                <div class="bibtex_template">
+                    <div class="citation">
+                        <span class="author"></span>. 
+                        <span class="year"></span>. 
+                        <br />
+                        "<span class="title"></span>". 
+                        <br />
+                        <span class="journal"></span>, 
+                        <span class="volume"></span>(<span class="number"></span>),
+                        <span class="pages"></span>
+                        <br />
+                        <span class="if doi"><a class="doi">DOI</a></span>
+                        <span class="if pdf"><a class="pdf">PDF</a></span>
+                    </div>
+                </div>
+
+                <bibtex src="publications.bib"></bibtex>
+                <div id="bibtex_display"></div>
+
+                <h2>Labs & Groups</h2>
 
                 <div class="tabGroup">
-                    <span id="coding"></span>
-                    <h3>Coding</h3>
-
                     <div class="tab">
-                        <a href="https://customtd.herokuapp.com" target="_blank">
-                            <img src="icons/CustomTD.png" />
+                        <a href="https://picol-georgetown.github.io/index.html">
+                            <img src="https://picol-georgetown.github.io/assets/images/lab_photo.png" />
                             <div class="description">
-                                <h3>CustomTD <small>(WIP)</small></h3>
+                                <h3>PiCoL Lab</h3>
                                 <p>
-                                    Create and play user-created custom tower defense games
-                                    <span class="go">Go </span>
+                                    directed by Dr. Ethan Wilcox
                                 </p>
                             </div>
                         </a>
                     </div>
 
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/SketchGrapher" target="_blank">
-                            <img src="icons/SketchGrapher.png" />
+                        <a href="http://nert.georgetown.edu/">
+                            <img src="http://nert.georgetown.edu/img/nert-20260507-indoor-resized.jpg" />
                             <div class="description">
-                                <h3>SketchGrapher</h3>
+                                <h3>NERT Lab</h3>
                                 <p>
-                                    Generate a single math equation from any graph or sketch
-                                    <span class="go">Go </span>
+                                    directed by Dr. Nathan Schneider
                                 </p>
                             </div>
                         </a>
                     </div>
 
                     <div class="tab">
-                        <a href="https://github.com/alansheu2004/PID-Tuner" target="_blank">
-                            <img src="icons/PID-Tuner.png" />
+                        <a href="https://gucorpling.org/corpling/">
+                            <img src="https://gucorpling.org/corpling/images/GU_campus.png" />
                             <div class="description">
-                                <h3>PID-Tuner</h3>
+                                <h3>Corpling Lab</h3>
                                 <p>
-                                    A small Java program to help graph and tune PID
-                                    <span class="go">Go </span>
+                                    directed by Dr. Amir Zeldes
                                 </p>
                             </div>
                         </a>
                     </div>
 
                     <div class="tab">
-                        <a href="https://www.desmos.com/calculator/7ezc4wspwy" target="_blank">
-                            <img src="icons/softbody.png" />
+                        <a href="https://gucl.georgetown.edu/">
+                            <img src="https://gucl.georgetown.edu/img/GUCL_2018-04-10.jpg" />
                             <div class="description">
-                                <h3>Soft-Body Sim</h3>
+                                <h3>GUCL</h3>
                                 <p>
-                                    A soft-body simulation built on Desmos
-                                    <span class="go">Go </span>
+                                    Computation & Language @ Georgetown
                                 </p>
                             </div>
                         </a>
                     </div>
 
                     <div class="tab">
-                        <a href="https://alansheu2004.github.io/Anomia" target="_blank">
-                            <img src="icons/Anomia.png" />
+                        <a href="https://moellerlab.org/">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/UCSB_University_Center_and_Storke_Tower.jpg/500px-UCSB_University_Center_and_Storke_Tower.jpg" />
                             <div class="description">
-                                <h3>Anomia</h3>
+                                <h3>Moeller Lab <small>(former)</small></h3>
                                 <p>
-                                    A simple multiplayer card game that tests your memory and reflexes
-                                    <span class="go">Go </span>
+                                    directed by Dr. Holly Moeller
                                 </p>
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="tabGroup">
-                    <span id="blogs"></span>
-                    <h3>Blogs</h3>
-
-                    <div class="tab">
-                        <a href="https://alansheu2004.github.io/PIDeconstructed" target="_blank">
-                            <img src="icons/PIDeconstructed.png" />
-                            <div class="description">
-                                <h3>PIDeconstructed</h3>
-                                <p>
-                                    An interactive guide to PID control systems with simulations
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="https://alansheu2004.github.io/Rain-Running" target="_blank">
-                            <img src="icons/RainRunning.png" />
-                            <div class="description">
-                                <h3>Rain-Running</h3>
-                                <p>
-                                    Is it better to run in the rain???
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="tabGroup">
-                    <span id="art"></span>
-                    <h3>Art</h3>
-
-                    <div class="tab">
-                        <a href="art/heartandsoul.png" target="_blank">
-                            <img src="art/heartandsoul.png" />
-                            <div class="description">
-                                <h3>Heart & Soul</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/Blades.png" target="_blank">
-                            <img src="art/Blades.png" />
-                            <div class="description">
-                                <h3>Dance of Blades</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/music.png" target="_blank">
-                            <img src="art/music.png" />
-                            <div class="description">
-                                <h3>Music</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/behemoth.png" target="_blank">
-                            <img src="art/behemoth.png" />
-                            <div class="description">
-                                <h3>Behemoth</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/oracles.png" target="_blank">
-                            <img src="art/oracles.png" />
-                            <div class="description">
-                                <h3>Oracles</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/astral.png" target="_blank">
-                            <img src="art/astral.png" />
-                            <div class="description">
-                                <h3>Astral Tears</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/promise.png" target="_blank">
-                            <img src="art/promise.png" />
-                            <div class="description">
-                                <h3>The Promise</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/parting.png" target="_blank">
-                            <img src="art/parting.png" />
-                            <div class="description">
-                                <h3>Parting</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/capitalism.png" target="_blank">
-                            <img src="art/capitalism.png" />
-                            <div class="description">
-                                <h3>Capitalism</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="tab">
-                        <a href="art/hahn.png" target="_blank">
-                            <img src="art/hahn.png" />
-                            <div class="description">
-                                <h3>Hahn</h3>
-                                <p>
-                                    <span class="go">Go </span>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                
             </article>
 
 
-            <div id="footer3"></div>
-            <div id="footer2"></div>
+            <!-- <div id="footer3"></div>
+            <div id="footer2"></div> -->
             <footer>
                 <div class="coolButtons">
                     <a href="https://github.com/alansheu2004" target="_blank"><img src="icons/github.png" /></a>
                     <a href="https://www.linkedin.com/in/alansheu2004" target="_blank"><img src="icons/linkedin.png" style="filter: invert()" /></a>
-                    <a href="https://www.instagram.com/qi4e2" target="_blank"><img src="icons/instagram.png" style="filter: invert()" /></a>
                 </div>
-                <p>Phone: 1 (408)-218-0411</p>
                 <p>Email: <a href="mailto:alansheu2004@gmail.com">alansheu2004@gmail.com</a></p>
 
                 <img id="serpinski" src="icons/serpinski.png" />
