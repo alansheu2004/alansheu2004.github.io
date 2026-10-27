@@ -89,7 +89,6 @@ div#tags span {
     text-transform: uppercase;
     overflow-x: visible; 
     color: white;
-    font-size: 18pt;
     margin: 0;
     padding: 0 10px;
     border-right: 1px solid white;
@@ -97,7 +96,6 @@ div#tags span {
 
 h1 {
     color: white;
-    font-size: 30pt;
 }
 
 img.face {
@@ -108,7 +106,7 @@ img.face {
     margin-bottom: 25px;
     border: rgb(0, 150, 0) 15px solid;
     animation-name: fadeSlideUp;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     transform-origin: 50% 50%;
@@ -130,7 +128,6 @@ p a {
 }
 
 article > p, article > ul {
-    font-size: 12pt;
     margin-bottom: 20px;
     animation-name: fadeSlideRight;
     animation-delay: 0.4s;
@@ -150,7 +147,6 @@ p.blurb {
     position: relative;
     color: white;
     padding: 20px 0;
-    font-size: 12pt;
     animation-name: fadeSlideRight;
     animation-delay: 1.2s;
     animation-duration: 0.5s;
@@ -187,7 +183,6 @@ h2 {
     color: white;
     font-variant: small-caps;
     text-align: center;
-    font-size: 14pt;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -213,7 +208,6 @@ nav a {
     display: inline-block;
     transition: 0.2s;
     color: white;
-    font-size: 12pt;
     font-variant: small-caps;
     background-color: rgb(0, 150, 0);
     padding: 10px 25px;
@@ -294,7 +288,6 @@ div.tabGroup {
 div.tabGroup > h3 {
     width: 100%;
     margin-bottom: 5px;
-    font-size: 14pt;
     animation-name: fadeSlideUp;
     animation-delay: 2s;
     animation-duration: 0.5s;
@@ -316,7 +309,6 @@ div.tabGroup a {
 div.tabGroup > p {
     width: 100%;
     margin-bottom: 20px;
-    font-size: 12pt;
     animation-name: fadeSlideUp;
     animation-delay: 2s;
     animation-duration: 0.5s;
@@ -364,7 +356,6 @@ div.description {
 
 div.description h3 {
     color: black;
-    font-size: 14pt;
     margin-bottom: 10px;
 }
 
@@ -379,7 +370,6 @@ div.description h3 img.desmos {
 div.description p {
     color: black;
     position: relative;
-    font-size: 12pt;
 }
 
 div.description p span.go {
@@ -387,7 +377,6 @@ div.description p span.go {
     font-weight: bold;
     display: block;
     margin-top: 10px;
-    font-size: 14pt;
 }
 
 div.tab div.description p span.go::after {
@@ -446,19 +435,17 @@ div.tab:hover div.description p span.go::after {
     }
 
     div.description h3 {
-        font-size: 14pt;
         margin-bottom: 10px;
     }
 
     div.description p {
-        font-size: 12pt;
     }
 
     img.face {
         position: relative;
         right: 0;
         top: 0;
-        width: 60vw;
+        width: 70vw;
         border: rgb(0, 150, 0) 5px solid;
         animation-name: fadeSlideUp;
         animation-delay: 1s;
@@ -472,6 +459,17 @@ div.tab:hover div.description p span.go::after {
 @media screen and (min-aspect-ratio: 5/3) {
     div.tab {
         width: 28%;
+    }
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+    html {
+        font-size: 150%;
+    }
+
+    h1 {
+        font-size: 60pt;
+        margin-top: 30px;
     }
 }
 
