@@ -49,10 +49,44 @@ div#main {
     z-index: 10;
 }
 
+nav {
+    display: block;
+    background-color: rgb(0, 80, 0);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    font-size: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    transition: 0.2s;
+    color: white;
+    font-variant: small-caps;
+    background-color: rgb(0, 80, 0);
+    padding: 10px 25px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: initial;
+}
+
+nav a:hover {
+    transition: 0.2s;
+    background-color: rgb(0, 100, 0);
+}
+
+nav a:active {
+    transition: 0.2s;
+    background-color: rgb(0, 50, 0);
+}
+
 header {
     width: 100%;
     background-color: rgb(0,100,0);
-    padding: 25px 5% 10px 5%;
+    padding: 30px 5% 10px 5%;
     animation-name: expandHeight;
     animation-duration: 0.3s;
     animation-timing-function: cubic-bezier(0, 0.95, 0.99, 1);
@@ -279,50 +313,6 @@ h2 {
     margin-top: 20px;
 }
 
-nav {
-    animation-name: fadeSlideRight;
-    animation-delay: 1.8s;
-    animation-duration: 0.5s;
-    animation-fill-mode: backwards;
-
-    margin-top: 40px;
-    margin-bottom: 20px;
-    background-color: rgb(0, 150, 0);
-    padding: 0 2vw;
-
-    position: sticky;
-    top: 0;
-    width: 40vw;
-    text-align: center;
-}
-
-nav a {
-    display: inline-block;
-    transition: 0.2s;
-    color: white;
-    font-variant: small-caps;
-    background-color: rgb(0, 150, 0);
-    padding: 10px 25px;
-    border: none;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav a:hover {
-    transition: 0.2s;
-    background-color: rgb(0, 130, 0);
-}
-
-nav a:active {
-    transition: 0.2s;
-    background-color: rgb(0, 100, 0);
-}
-
-
-nav button:disabled {
-    background-color: rgb(0, 100, 0);
-}
-
 div.bibtex_display {
     /* margin-bottom: 10px; */
 }
@@ -508,7 +498,7 @@ div.tab:hover div.description p span.go::after {
         display: none;
     } */
 
-    h2, nav {
+    h2 {
         width: 83vw;
     }
 
@@ -604,16 +594,6 @@ footer p a, header p a {
 footer p a:hover, header p a:hover {
     transition: 0.2s;
     cursor: pointer;
-}
-
-header nav a:hover {
-    transition: 0.2s;
-    background-color: rgb(0, 115, 0);
-}
-
-header nav a:active {
-    transition: 0.2s;
-    background-color: rgb(0, 100, 0);
 }
 
 #serpinski {
