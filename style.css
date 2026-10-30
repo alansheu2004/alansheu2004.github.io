@@ -9,6 +9,11 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: zhuohua-min;
+    src: url(zhuohua-min/ZhaohuaMinA.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -125,28 +130,79 @@ div.coolButtons a:active {
 }
 
 div.coolButtons a img {
-    height: 20px;
+    height: 15px;
     margin-right: 2px;
     vertical-align: middle;
 }
 
 div.coolbuttons a span {
     vertical-align: middle;
+    font-size: 75%;
 }   
 
-img.face {
+div.photos {
     position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 30vw;
-    margin-bottom: 25px;
-    border: rgb(0, 150, 0) 15px solid;
+    top: 3vw;
+    right: 3vw;
+    width: 32vw;
+    aspect-ratio: 4 / 3;
     animation-name: fadeSlideUp;
-    animation-delay: 0.8s;
+    animation-delay: 0.5s;
     animation-duration: 0.5s;
     animation-fill-mode: backwards;
     transform-origin: 50% 50%;
     transition-duration: 0.25s;
+}
+
+div.photos div.big_photo {
+    width: 75%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgb(240, 255, 240);
+    transform: rotate(5deg);
+    box-shadow: 0 0 10px;
+    text-align: right;
+}
+
+div.photos div.small_photo {
+    width: 50%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgb(240, 255, 240);
+    transform: rotate(-5deg);
+    box-shadow: 0 0 10px;
+    text-align: left;
+}
+
+div.photos > div > img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+
+div.photos p {
+    color: rgb(0, 80, 0);
+    font-family: "zhuohua-min";
+    display: inline-block;
+}
+
+div.big_photo p {
+    width: 50%;
+    text-align: right;
+    margin-right: 5px;
+}
+
+div.small_photo p {
+    text-align: left;
+    margin-left: 5px;
 }
 
 article {
@@ -395,9 +451,14 @@ div.description {
     padding: 15px;
 }
 
+
 div.description h3 {
     color: black;
-    margin-bottom: 10px;
+}
+
+div.description h5 {
+    color: black;
+    margin: 3px 0;
 }
 
 div.description h3 img.desmos {
@@ -411,6 +472,7 @@ div.description h3 img.desmos {
 div.description p {
     color: black;
     position: relative;
+    margin-top: 10px;
 }
 
 div.description p span.go {
@@ -456,15 +518,20 @@ div.tab:hover div.description p span.go::after {
     }
 
     div.tab {
-        display: inline-block;
         margin: 0vw 0vw 30px 0vw;
         width: 100%;
+    }
+
+    div.tab a {
+        display: flex;
+        flex-direction: row;
+        min-height: 150px;
     }
 
     div.tab img {
         display: inline-block;
         max-width: 40%;
-        height: 150px;
+        align-self: center;
         object-fit: cover;
         vertical-align: middle;
     }
@@ -476,25 +543,13 @@ div.tab:hover div.description p span.go::after {
         padding: 15px;
     }
 
-    div.description h3 {
-        margin-bottom: 10px;
-    }
-
-    div.description p {
-    }
-
-    img.face {
+    div.photos {
         position: relative;
         right: 0;
         top: 0;
         width: 70vw;
-        border: rgb(0, 150, 0) 10px solid;
+        margin: 30px auto;
         animation-name: fadeSlideRight;
-        animation-delay: 1s;
-        animation-duration: 0.5s;
-        animation-fill-mode: backwards;
-        transform-origin: 50% 50%;
-        transition-duration: 0.25s;
     }
 }
 
@@ -515,7 +570,7 @@ div.tab:hover div.description p span.go::after {
     }
 
     div.coolButtons a img {
-        height: 25px;
+        height: 20px;
     }
 }
 
